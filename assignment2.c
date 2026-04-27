@@ -24,13 +24,7 @@ int main()
         break;
     case'D':
         printf("Multiplication of two no. %d\n",(n1*n2))
-        break;
-    de                                                                                                                                                                                                                                                                                                                                                       
-        printf("invalid")
-    
-
-                             
-
+        break;                                                                                                                                                                                                                                                                                                                                                      
 
   }
   return 0;

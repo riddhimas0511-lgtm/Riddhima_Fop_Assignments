@@ -1,45 +1,58 @@
 #include <stdio.h>
-struct Employee{
-    char name[10];
-    char designation[10];
-    char gender[10];
-    int date_of_joining;
-    float_salary
-}E[n];
-int main()
-{
-    int n =0,male =0,female =0,i;
-    printf("Enter total number of employee:\n");
-    scanf("%d",&total);
-    for(i=0;i<total;i++)
-    {
-        printf("Enter employee name:");
-        scanf("%s",E[1].name);
-    }
-    printf("Enter employee name:");
-    for(i=0;i=<total;i++)
-    {
-        printf("%s",E[1],name);
-    }
-    for(i=0;i<total;i++)
-    {
-        printf("enter employee designation:");
-        scanf("%s",E[1].designation);
-    }
-    printf("employee designation: %s,E[1],designation");
-    for(i = 0;i<total;i++)
-    {
-        printf("%s",E[i].designation);
-    }
-    for(i = 0; i<total; i++)
-    {
-        printf("Enter employee gender:");
-        scanf("%s",E[i].gender);
-    }
-    printf("employee gender: %s",E[i].gender):
-    for(i = 0; i< total; i++)
-    {
-        printf("%s",E)
-    }
+
+struct Student {
+    int roll;
+    char name[50];
+    float marks[3];
+    float total;
+    float percentage;
+};
+
+int main() {
     
+    int n, i, j;
+
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+ 
+        struct Student s[n];
+
+    for(i = 0; i < n; i++) {
+        printf("\nEnter details for student %d\n", i + 1);
+
+        printf("Roll number: ");
+        scanf("%d", &s[i].roll);
+
+        printf("Name: ");
+        scanf("%s", s[i].name);
+
+        printf("Enter marks for 3 subjects:\n");
+        s[i].total = 0;
+
+        for(j = 0; j < 3; j++) {
+            printf("Subject %d: ", j + 1);
+            scanf("%f", &s[i].marks[j]);
+            s[i].total += s[i].marks[j];
+        }
+
+        s[i].percentage = s[i].total / 3;
+    }
+
+    printf("\n--- Student Results ---\n");
+
+    for(i = 0; i < n; i++) {
+        printf("\nStudent %d\n", i + 1);
+        printf("Roll No: %d\n", s[i].roll);
+        printf("Name: %s\n", s[i].name);
+
+        printf("Marks: ");
+        for(j = 0; j < 3; j++) {
+            printf("%.2f ", s[i].marks[j]);
+        }
+
+        printf("\nTotal: %.2f", s[i].total);
+        printf("\nPercentage: %.2f%%\n", s[i].percentage);
+    }
+
+    return 0;
 }

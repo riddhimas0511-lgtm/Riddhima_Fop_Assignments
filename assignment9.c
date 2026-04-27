@@ -16,11 +16,11 @@ scanf("%d",&num);
     }
     if(sum==num)
     {
-        printf("%d is an ammstrong number.\n",num);
+        printf("%d is an armstrong number.\n",num);
     }
     else
     {
-        printf("%d is not an ammstrong number.\n",num);
+        printf("%d is not an armstrong number.\n",num);
     }
     return 0;
 }
